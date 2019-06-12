@@ -1,0 +1,955 @@
+2019/06/12 11:13:26 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "user". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user
+---
+2019/06/12 11:14:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=gii
+---
+2019/06/12 11:14:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii/default/login". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=gii/default/login
+---
+2019/06/12 11:23:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistemalocadora.tbl_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_user`.
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 11:24:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sistemalocadora.tb_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tb_user`.
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 11:52:39 [error] [exception.CHttpException.404] CHttpException: The requested view "products" was not found. in /data/www/yii/web/actions/CViewAction.php:112
+Stack trace:
+#0 /data/www/yii/web/actions/CViewAction.php(123): CViewAction->resolveView('products')
+#1 /data/www/yii/web/actions/CAction.php(76): CViewAction->run()
+#2 /data/www/yii/web/CController.php(308): CAction->runWithParams(Array)
+#3 /data/www/yii/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /data/www/yii/web/CWebApplication.php(282): CController->run('page')
+#6 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=site/page&view=products
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php
+---
+2019/06/12 11:57:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "user". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user
+---
+2019/06/12 11:59:39 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 11:59:39 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 11:59:44 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/sistemalocadora/protected/models/User.php(82): CActiveRecord->__get('email')
+#2 /data/www/sistemalocadora/protected/views/user/admin.php(45): User->search()
+#3 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#4 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#5 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(785): CController->renderPartial('admin', Array, true)
+#7 /data/www/sistemalocadora/protected/controllers/UserController.php(142): CController->render('admin', Array)
+#8 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionAdmin()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /data/www/yii/web/CWebApplication.php(282): CController->run('admin')
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/admin
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:00:09 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:00:09 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:04:55 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/sistemalocadora/protected/models/User.php(82): CActiveRecord->__get('email')
+#2 /data/www/sistemalocadora/protected/views/user/admin.php(45): User->search()
+#3 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#4 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#5 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(785): CController->renderPartial('admin', Array, true)
+#7 /data/www/sistemalocadora/protected/controllers/UserController.php(142): CController->render('admin', Array)
+#8 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionAdmin()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /data/www/yii/web/CWebApplication.php(282): CController->run('admin')
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/admin
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user
+---
+2019/06/12 12:05:06 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:05:06 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:09:36 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:09:36 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:09:53 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:09:53 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:10:35 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:10:35 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:10:55 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:10:55 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:11:22 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/sistemalocadora/protected/models/User.php(82): CActiveRecord->__get('email')
+#2 /data/www/sistemalocadora/protected/views/user/admin.php(45): User->search()
+#3 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#4 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#5 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(785): CController->renderPartial('admin', Array, true)
+#7 /data/www/sistemalocadora/protected/controllers/UserController.php(142): CController->render('admin', Array)
+#8 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionAdmin()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /data/www/yii/web/CWebApplication.php(282): CController->run('admin')
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/admin
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/index
+---
+2019/06/12 12:11:27 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:11:27 [error] [exception.CException] CException: Property "User.email" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('email')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('email')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'email')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:13:20 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:13:20 [error] [exception.CException] CException: Property "User.telefeno" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('telefeno')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('telefeno')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'telefeno')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:13:58 [warning] [application] Failed to set unsafe attribute "telefone" of "User".
+in /data/www/sistemalocadora/protected/controllers/UserController.php (72)
+in /data/www/sistemalocadora/index.php (13)
+2019/06/12 12:13:58 [error] [exception.CException] CException: Property "User.telefene" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('telefene')
+#1 /data/www/yii/validators/CStringValidator.php(79): CActiveRecord->__get('telefene')
+#2 /data/www/yii/validators/CValidator.php(201): CStringValidator->validateAttribute(Object(User), 'telefene')
+#3 /data/www/yii/base/CModel.php(159): CValidator->validate(Object(User), Array)
+#4 /data/www/yii/db/ar/CActiveRecord.php(810): CModel->validate(NULL)
+#5 /data/www/sistemalocadora/protected/controllers/UserController.php(73): CActiveRecord->save()
+#6 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#14 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user/create
+---
+2019/06/12 12:19:26 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "use". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('use')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=use
+---
+2019/06/12 12:27:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "film". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('film')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=film
+---
+2019/06/12 13:54:06 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /data/www/yii/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /data/www/yii/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /data/www/yii/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#6 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /data/www/yii/web/CWebApplication.php(282): CController->run('admin')
+#8 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/admin
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=user
+---
+2019/06/12 14:02:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "aluguwl/admin". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('aluguwl/admin')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=aluguwl/admin
+---
+2019/06/12 14:10:00 [error] [exception.CException] CException: Property "Aluguel.periodo" is not defined. in /data/www/yii/base/CComponent.php:130
+Stack trace:
+#0 /data/www/yii/db/ar/CActiveRecord.php(145): CComponent->__get('periodo')
+#1 /data/www/yii/web/helpers/CHtml.php(2760): CActiveRecord->__get('periodo')
+#2 /data/www/yii/web/helpers/CHtml.php(2483): CHtml::resolveValue(Object(Aluguel), 'periodo')
+#3 /data/www/yii/web/helpers/CHtml.php(1540): CHtml::activeInputField('text', Object(Aluguel), 'periodo', Array)
+#4 /data/www/yii/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(Aluguel), 'periodo', Array)
+#5 /data/www/sistemalocadora/protected/views/aluguel/_form.php(36): CActiveForm->textField(Object(Aluguel), 'periodo')
+#6 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#7 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#8 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#9 /data/www/sistemalocadora/protected/views/aluguel/create.php(18): CController->renderPartial('_form', Array)
+#10 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#11 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#12 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#13 /data/www/yii/web/CController.php(785): CController->renderPartial('create', Array, true)
+#14 /data/www/sistemalocadora/protected/controllers/AluguelController.php(78): CController->render('create', Array)
+#15 /data/www/yii/web/actions/CInlineAction.php(49): AluguelController->actionCreate()
+#16 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#20 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#23 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /data/www/yii/web/CWebApplication.php(282): CController->run('create')
+#25 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('aluguel/create')
+#26 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#27 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=aluguel/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=aluguel/view&id=2
+---
+2019/06/12 14:12:29 [error] [exception.CException] CException: AluguelController cannot find the requested view "view". in /data/www/yii/web/CController.php:881
+Stack trace:
+#0 /data/www/yii/web/CController.php(785): CController->renderPartial('view', Array, true)
+#1 /data/www/sistemalocadora/protected/controllers/AluguelController.php(55): CController->render('view', Array)
+#2 [internal function]: AluguelController->actionView('2')
+#3 /data/www/yii/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AluguelController), Array)
+#4 /data/www/yii/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AluguelController), Object(ReflectionMethod), Array)
+#5 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /data/www/yii/web/CWebApplication.php(282): CController->run('view')
+#14 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('aluguel/view')
+#15 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=aluguel/view&id=2
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=aluguel/create
+---
+2019/06/12 14:26:21 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "file/create". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('file/create')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=file/create
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php
+---
+2019/06/12 14:30:38 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "clientes/admin". in /data/www/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('clientes/admin')
+#1 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=clientes/admin
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=filme/admin
+---
+2019/06/12 15:12:24 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:12:32 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:12:42 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:13:12 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:13:31 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:13:50 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /data/www/sistemalocadora/protected/views/categoria/_form.php on line 25 and defined (/data/www/yii/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#1 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#2 /data/www/sistemalocadora/protected/views/categoria/create.php(18): CategoriaController->renderPartial()
+#3 /data/www/yii/web/CBaseController.php(126): require()
+#4 /data/www/yii/web/CBaseController.php(95): CategoriaController->renderInternal()
+#5 /data/www/yii/web/CController.php(872): CategoriaController->renderFile()
+#6 /data/www/yii/web/CController.php(785): CategoriaController->renderPartial()
+#7 /data/www/sistemalocadora/protected/controllers/CategoriaController.php(78): CategoriaController->render()
+#8 /data/www/yii/web/actions/CInlineAction.php(49): CategoriaController->actionCreate()
+#9 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /data/www/yii/web/filters/CFilterChain.php(134): CategoriaController->runAction()
+#11 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(1148): CAccessControlFilter->filter()
+#13 /data/www/yii/web/filters/CInlineFilter.php(58): CategoriaController->filterAccessControl()
+#14 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#16 /data/www/yii/web/CController.php(265): CategoriaController->runActionWithFilters()
+#17 /data/www/yii/web/CWebApplication.php(282): CategoriaController->run()
+#18 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /data/www/sistemalocadora/index.php(13): CWebApplication->run()
+REQUEST_URI=/sistemalocadora/index.php?r=categoria/create
+in /data/www/sistemalocadora/protected/views/categoria/_form.php (25)
+in /data/www/sistemalocadora/protected/views/categoria/create.php (18)
+in /data/www/sistemalocadora/protected/controllers/CategoriaController.php (78)
+2019/06/12 15:20:59 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /data/www/yii/web/CController.php:337
+Stack trace:
+#0 /data/www/yii/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#7 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /data/www/yii/web/CWebApplication.php(282): CController->run('update')
+#9 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('filme/update')
+#10 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=filme/update
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=filme/view&id=1
+---
+2019/06/12 15:36:00 [error] [exception.ParseError] ParseError: syntax error, unexpected ''itemView'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /data/www/sistemalocadora/protected/views/user/index.php:16
+Stack trace:
+#0 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#1 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#2 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#3 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#4 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#5 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#12 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#14 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:10 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:10 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:11 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:17 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:18 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:18 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:19 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---
+2019/06/12 15:36:19 [error] [exception.CException] CException: Property "CListView.dataProvider \n" is not defined. in /data/www/yii/base/CComponent.php:173
+Stack trace:
+#0 /data/www/yii/web/CWidgetFactory.php(161): CComponent->__set('dataProvider \\n', Object(CActiveDataProvider))
+#1 /data/www/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CListView', Array)
+#2 /data/www/yii/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /data/www/sistemalocadora/protected/views/user/index.php(16): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /data/www/yii/web/CBaseController.php(126): require('/data/www/siste...')
+#5 /data/www/yii/web/CBaseController.php(95): CBaseController->renderInternal('/data/www/siste...', Array, true)
+#6 /data/www/yii/web/CController.php(872): CBaseController->renderFile('/data/www/siste...', Array, true)
+#7 /data/www/yii/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /data/www/sistemalocadora/protected/controllers/UserController.php(127): CController->render('index', Array)
+#9 /data/www/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#10 /data/www/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /data/www/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /data/www/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /data/www/yii/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /data/www/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /data/www/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /data/www/yii/web/CController.php(291): CFilterChain->run()
+#17 /data/www/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /data/www/yii/web/CWebApplication.php(282): CController->run('index')
+#19 /data/www/yii/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#20 /data/www/yii/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /data/www/sistemalocadora/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sistemalocadora/index.php?r=user/index
+HTTP_REFERER=http://127.0.0.1/sistemalocadora/index.php?r=categoria/index
+---

@@ -35,7 +35,7 @@ class Filme extends CActiveRecord
 			array('nome', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idfilme, nome, idcategoria', 'safe', 'on'=>'search'),
+			array('idfilme, nome, idcategoria, idcategoria0', 'safe', 'on'=>'search'),
 		);
 	}
 

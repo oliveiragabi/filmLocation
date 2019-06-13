@@ -43,7 +43,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'idfilme',
 		'nome',
-		'idcategoria',
+		array(
+			'header'=>'Categoria',
+			'value'=>'$data->idcategoria0->nome',
+		),
 		array(
 			'class'=>'CButtonColumn',
 		),

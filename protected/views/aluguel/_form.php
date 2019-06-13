@@ -19,34 +19,52 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'iduser'); ?>
-		<?php echo $form->textField($model,'iduser'); ?>
-		<?php echo $form->error($model,'iduser'); ?>
-	</div>
+<div class="row">
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'vltotal'); ?>
-		<?php echo $form->textField($model,'vltotal'); ?>
-		<?php echo $form->error($model,'vltotal'); ?>
+		<?php echo $form->labelEx($model,'idusuario', array(
+			'class'=>'col-2 control-label'
+		)); ?>
+		<?php $user = User::model()->findAll();
+        $list = CHtml::listData($user, 'idusuario', 'nome');
+        ?>
+        <div class="col-10">
+        <?php
+		echo $form->dropDownList($model,'idusuario', $list, array(
+			'empty'=>'Selecione',
+			'class'=>'form-control'
+		)); ?>
 	</div>
+		<?php echo $form->error($model,'idusuario'); ?>
+</div>
+
+<div class="row">
+
+		<?php echo $form->labelEx($model,'idfilme', array(
+			'class'=>'col-2 control-label'
+		)); ?>
+		<?php $filme = Filme::model()->findAll();
+        $list = CHtml::listData($filme, 'idfilme', 'nome');
+        ?>
+        <div class="col-10">
+        <?php
+		echo $form->dropDownList($model,'idfilme', $list, array(
+			'empty'=>'Selecione',
+			'class'=>'form-control'
+		)); ?>
+	</div>
+		<?php echo $form->error($model,'idfilme'); ?>
+</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'data_inicial'); ?>
-		<?php echo $form->textField($model,'data_inicial'); ?>
+		<?php echo $form->dateTimeLocalField($model,'data_inicial'); ?>
 		<?php echo $form->error($model,'data_inicial'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'data_final'); ?>
-		<?php echo $form->textField($model,'data_final'); ?>
+		<?php echo $form->dateTimeLocalField($model,'data_final'); ?>
 		<?php echo $form->error($model,'data_final'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'qtdfilme'); ?>
-		<?php echo $form->textField($model,'qtdfilme'); ?>
-		<?php echo $form->error($model,'qtdfilme'); ?>
 	</div>
 
 	<div class="row buttons">

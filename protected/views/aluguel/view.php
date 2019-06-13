@@ -3,7 +3,7 @@
 /* @var $model Aluguel */
 
 $this->breadcrumbs=array(
-	'Aluguels'=>array('index'),
+	'Alugueis'=>array('index'),
 	$model->idaluguel,
 );
 
@@ -22,10 +22,17 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idaluguel',
-		'iduser',
-		'vltotal',
+		array(
+			'label'=>'Cliente',
+			'value'=>$model->idusuario0->nome
+		),
+		array(
+			'label'=>'Filme escolhido',
+			'value'=>$model->idfilme0->nome
+		),
 		'data_inicial',
 		'data_final',
-		'qtdfilme',
 	),
 )); ?>
+<br>
+<br>

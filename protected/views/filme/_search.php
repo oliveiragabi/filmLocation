@@ -22,11 +22,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'preco'); ?>
-		<?php echo $form->textField($model,'preco'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'idcategoria'); ?>
 		<?php echo $form->textField($model,'idcategoria'); ?>
 	</div>

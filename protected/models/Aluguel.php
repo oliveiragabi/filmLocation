@@ -4,15 +4,15 @@
  * This is the model class for table "tb_aluguel".
  *
  * The followings are the available columns in table 'tb_aluguel':
- * @property string $idaluguel
- * @property integer $iduser
- * @property double $vltotal
+ * @property integer $idaluguel
+ * @property integer $idusuario
+ * @property integer $idfilme
  * @property string $data_inicial
  * @property string $data_final
- * @property integer $qtdfilme
  *
  * The followings are the available model relations:
- * @property TbUser $iduser0
+ * @property TbFilme $idfilme0
+ * @property TbUser $idusuario0
  */
 class Aluguel extends CActiveRecord
 {
@@ -32,12 +32,11 @@ class Aluguel extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('vltotal, data_inicial, data_final', 'required'),
-			array('iduser, qtdfilme', 'numerical', 'integerOnly'=>true),
-			array('vltotal', 'numerical'),
+			array('idusuario, idfilme, data_inicial, data_final', 'required'),
+			array('idusuario, idfilme', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idaluguel, iduser, vltotal, data_inicial, data_final, qtdfilme', 'safe', 'on'=>'search'),
+			array('idaluguel, idusuario, idfilme, data_inicial, data_final', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,7 +48,8 @@ class Aluguel extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iduser0' => array(self::BELONGS_TO, 'TbUser', 'iduser'),
+			'idfilme0' => array(self::BELONGS_TO, 'Filme', 'idfilme'),
+			'idusuario0' => array(self::BELONGS_TO, 'User', 'idusuario'),
 		);
 	}
 
@@ -60,11 +60,10 @@ class Aluguel extends CActiveRecord
 	{
 		return array(
 			'idaluguel' => 'Idaluguel',
-			'iduser' => 'Iduser',
-			'vltotal' => 'Vltotal',
+			'idusuario' => 'Idusuario',
+			'idfilme' => 'Idfilme',
 			'data_inicial' => 'Data Inicial',
 			'data_final' => 'Data Final',
-			'qtdfilme' => 'Qtdfilme',
 		);
 	}
 
@@ -86,12 +85,13 @@ class Aluguel extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idaluguel',$this->idaluguel,true);
-		$criteria->compare('iduser',$this->iduser);
-		$criteria->compare('vltotal',$this->vltotal);
+		$criteria->compare('idaluguel',$this->idaluguel);
+		$criteria->compare('idusuario',$this->idusuario);
+		$criteria->compare('idfilme',$this->idfilme);
 		$criteria->compare('data_inicial',$this->data_inicial,true);
 		$criteria->compare('data_final',$this->data_final,true);
-		$criteria->compare('qtdfilme',$this->qtdfilme);
+		//$criteria->compare('idcategoria',$this->nome); 
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,4 +108,39 @@ class Aluguel extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function afterFind()
+	{
+	    $newDate = DateTime::createFromFormat('Y-m-d', $this->data_inicial);
+
+	    $this->data_inicial = $newDate->format('d/m/Y');
+
+	    $newDate = DateTime::createFromFormat('Y-m-d', $this->data_final);
+
+	    $this->data_final = $newDate->format('d/m/Y');
+
+	    return parent::afterFind();
+	}
+
+	public function beforeSave()
+	{
+		if(strpos($this->data_inicial, '/') !== false){
+
+	    $newDate = DateTime::createFromFormat('d/m/Y', $this->data_inicial);
+
+	    $this->data_inicial = $newDate->format('Y-m-d');
+		
+		}
+		if(strpos($this->data_final, '/') !== false){
+
+	    $newDate = DateTime::createFromFormat('d/m/Y', $this->data_final);
+
+	    $this->data_final = $newDate->format('Y-m-d');
+		
+		}
+
+	    return parent::beforeSave();
+	}
+
+
 }

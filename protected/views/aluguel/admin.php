@@ -3,9 +3,10 @@
 /* @var $model Aluguel */
 
 $this->breadcrumbs=array(
-	'Aluguels'=>array('index'),
+	'Alugueis'=>array('index'),
 	'Manage',
 );
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -21,7 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Aluguels</h1>
+<h1>Manage Alugueis</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,22 +41,32 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
+		'idusuario',
+		array(
+			'header'=>'Cliente',
+			'value'=>'$data->idusuario0->nome',
+			
+		),
+		array(
+			'header'=>'Filme',
+			'value'=>'$data->idfilme0->nome',
+		),
+		
 		'idaluguel',
-		'iduser',
-		'vltotal',
 		'data_inicial',
 		'data_final',
-		'qtdfilme',
+
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+
 <br>
-<br>
-	<div class="col-10">
+	<br>
+	<div class="row">
 		<div class="list-group" >
+			<a href="/sistemalocadora/index.php?r=aluguel/index" class="list-group-item">Listar</a>
 			<a href="/sistemalocadora/index.php?r=aluguel/create" class="list-group-item">Criar</a>
-			<a href="/sistemalocadora/index.php?r=aluguel/admin" class="list-group-item">Gerenciamento</a>
 		</div>
 	</div>

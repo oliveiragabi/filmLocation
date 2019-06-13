@@ -13,17 +13,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'idaluguel'); ?>
-		<?php echo $form->textField($model,'idaluguel',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->textField($model,'idaluguel'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'iduser'); ?>
-		<?php echo $form->textField($model,'iduser'); ?>
+		<?php echo $form->label($model,'idusuario'); ?>
+		<?php echo $form->textField($model,'idusuario'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'vltotal'); ?>
-		<?php echo $form->textField($model,'vltotal'); ?>
+		<?php echo $form->label($model,'idfilme'); ?>
+		<?php echo $form->textField($model,'idfilme'); ?>
 	</div>
 
 	<div class="row">
@@ -34,11 +34,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'data_final'); ?>
 		<?php echo $form->textField($model,'data_final'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'qtdfilme'); ?>
-		<?php echo $form->textField($model,'qtdfilme'); ?>
 	</div>
 
 	<div class="row buttons">

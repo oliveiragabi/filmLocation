@@ -4,10 +4,13 @@
  * This is the model class for table "tb_user".
  *
  * The followings are the available columns in table 'tb_user':
- * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $email
+ * @property integer $idusuario
+ * @property string $nome
+ * @property string $senha
+ * @property integer $telefone
+ *
+ * The followings are the available model relations:
+ * @property TbAluguel[] $tbAluguels
  */
 class User extends CActiveRecord
 {
@@ -27,21 +30,25 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, telefone', 'length', 'max'=>128),
+			array('nome, senha', 'required'),
+			array('telefone', 'numerical', 'integerOnly'=>true),
+			array('nome', 'length', 'max'=>10),
+			array('senha', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, telefone', 'safe', 'on'=>'search'),
+			array('idusuario, nome, senha, telefone', 'safe', 'on'=>'search'),
 		);
 	}
 
 	/**
 	 * @return array relational rules.
-	one
+	 */
 	public function relations()
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'tbAluguels' => array(self::HAS_MANY, 'TbAluguel', 'idusuario'),
 		);
 	}
 
@@ -51,9 +58,9 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
+			'idusuario' => 'Idusuario',
+			'nome' => 'Nome',
+			'senha' => 'Senha',
 			'telefone' => 'Telefone',
 		);
 	}
@@ -76,10 +83,10 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('telefone',$this->telefone,true);
+		$criteria->compare('idusuario',$this->idusuario);
+		$criteria->compare('nome',$this->nome,true);
+		$criteria->compare('senha',$this->senha,true);
+		$criteria->compare('telefone',$this->telefone);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

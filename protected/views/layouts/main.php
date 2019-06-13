@@ -98,6 +98,17 @@
 
           </ul>
         </li>
+
+         <li><a href="http://127.0.0.1/sistemalocadora/index.php?r=site/login">Login <?php $this->widget('zii.widgets.CMenu',array(
+      'items'=>array(
+        array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest)    
+      ),
+
+      //'items'=>array(
+      //  array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)      
+      //)
+    )); ?></a></li> 
+
               
 
             </ul>

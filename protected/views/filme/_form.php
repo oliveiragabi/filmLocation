@@ -24,17 +24,8 @@
 		<?php echo $form->textField($model,'nome',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nome'); ?>
 	</div>
-	
-	<br>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'preco'); ?>
-		<?php echo $form->textField($model,'preco'); ?>
-		<?php echo $form->error($model,'preco'); ?>
-	</div>
-	<br>
-
-	<div class="row">
+<div class="row">
 
 		<?php echo $form->labelEx($model,'idcategoria', array(
 			'class'=>'col-2 control-label'
@@ -50,7 +41,9 @@
 		)); ?>
 	</div>
 		<?php echo $form->error($model,'idcategoria'); ?>
-	</div>
+</div>
+
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

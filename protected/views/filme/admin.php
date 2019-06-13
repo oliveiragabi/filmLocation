@@ -43,19 +43,23 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'idfilme',
 		'nome',
-		'preco',
-		'idcategoria',
+		array(
+			'header'=>'Categoria',
+			'value'=> '$data->idcategoria0->nome'
+		),
 		array(
 			'class'=>'CButtonColumn',
 		),
+	
 	),
 )); ?>
 
 <br>
 <br>
-	<div class="col-10">
+
+<div class="row">
 		<div class="list-group" >
-			<a href="/sistemalocadora/index.php?r=filme/create" class="list-group-item">Criar</a>
-			<a href="/sistemalocadora/index.php?r=filme/admin" class="list-group-item">Gerenciamento</a>
+			<a href="/sistemalocadora/index.php?r=filme/index" class="list-group-item">Criar</a>
+			<a href="/sistemalocadora/index.php?r=filme/create" class="list-group-item">Gerenciamento</a>
 		</div>
-	</div>
+</div>

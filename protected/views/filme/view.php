@@ -23,20 +23,13 @@ $this->menu=array(
 	'attributes'=>array(
 		'idfilme',
 		'nome',
-		'preco',
-		'idcategoria',
+		array(
+			'label'=>'Categoria',
+			'value'=>$model->idcategoria0->nome
+		),
+		
 	),
 )); ?>
 
-<!--<br>
 <br>
-	<div class="col-10">
-		<div class="list-group" >
-			<a href="/sistemalocadora/index.php?r=filme/index" class="list-group-item">Listar</a>
-			<a href="/sistemalocadora/index.php?r=filme/create" class="list-group-item">Criar</a>
-			<a href="/sistemalocadora/index.php?r=filme/update" class="list-group-item">Atualizar</a>
-			<a href="/sistemalocadora/index.php?r=filme/create" class="list-group-item">Deletar</a>
-			<a href="/sistemalocadora/index.php?r=categoria/admin" class="list-group-item">Gerenciamento</a>
-		</div>
-	</div>
--->
+<br>

@@ -41,9 +41,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'username',
-		'password',
+		'idusuario',
+		'nome',
+		'senha',
 		'telefone',
 		array(
 			'class'=>'CButtonColumn',
@@ -51,10 +51,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	),
 )); ?>
 
-
-	<div class="col-4">
+<br>
+<br>
+<div class="row">
 		<div class="list-group" >
 			<a href="/sistemalocadora/index.php?r=user/create" class="list-group-item">Criar</a>
-			<a href="/sistemalocadora/index.php?r=user/admin" class="list-group-item">Gerenciamento</a>
+			<a href="/sistemalocadora/index.php?r=user/index" class="list-group-item">Listar</a>
 		</div>
 	</div>

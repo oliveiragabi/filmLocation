@@ -13,5 +13,6 @@
 	<?php echo CHtml::encode($data->nome); ?>
 	<br />
 
-
 </div>
+
+<br>

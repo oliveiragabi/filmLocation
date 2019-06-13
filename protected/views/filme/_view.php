@@ -13,13 +13,8 @@
 	<?php echo CHtml::encode($data->nome); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('preco')); ?>:</b>
-	<?php echo CHtml::encode($data->preco); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idcategoria')); ?>:</b>
-	<?php echo CHtml::encode($data->idcategoria); ?>
+	<?php echo CHtml::encode($data->idcategoria0->nome); ?>
 	<br />
-
-
 </div>
+<br>

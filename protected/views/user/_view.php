@@ -5,16 +5,16 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idusuario')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idusuario), array('view', 'id'=>$data->idusuario)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
-	<?php echo CHtml::encode($data->username); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nome')); ?>:</b>
+	<?php echo CHtml::encode($data->nome); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('senha')); ?>:</b>
+	<?php echo CHtml::encode($data->senha); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('telefone')); ?>:</b>
@@ -23,3 +23,4 @@
 
 
 </div>
+<br>

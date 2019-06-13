@@ -7,7 +7,6 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -48,11 +47,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
-<br>
-<br>
-	<div class="row">
+
+<div class="row" style="margin-top: 7%;">
 		<div class="list-group" >
+			<a href="/sistemalocadora/index.php?r=categoria/index" class="list-group-item">Listar</a>
 			<a href="/sistemalocadora/index.php?r=categoria/create" class="list-group-item">Criar</a>
-			<a href="/sistemalocadora/index.php?r=categoria/admin" class="list-group-item">Gerenciamento</a>
 		</div>
-	</div>
+</div>

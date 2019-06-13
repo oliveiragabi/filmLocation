@@ -2,7 +2,6 @@
 /* @var $this CategoriaController */
 /* @var $model Categoria */
 /* @var $form CActiveForm */
-
 ?>
 
 <div class="form">
@@ -19,12 +18,6 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'idcategoria'); ?>
-		<?php echo $form->textField($model,'idcategoria'); ?>
-		<?php echo $form->error($model,'idcategoria'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nome'); ?>

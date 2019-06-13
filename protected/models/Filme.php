@@ -49,7 +49,6 @@ class Filme extends CActiveRecord
 		return array(
 			'tbAluguels' => array(self::HAS_MANY, 'Aluguel', 'idfilme'),
 			'idcategoria0' => array(self::BELONGS_TO, 'Categoria', 'idcategoria'),
-			'idcategoria1' => array(self::BELONGS_TO, 'Categoria', 'nome'),
 		);
 	}
 
@@ -61,7 +60,7 @@ class Filme extends CActiveRecord
 		return array(
 			'idfilme' => 'Idfilme',
 			'nome' => 'Nome',
-			'idcategoria' => 'Categoria',
+			'idcategoria0' => 'Categoria',
 
 		);
 	}

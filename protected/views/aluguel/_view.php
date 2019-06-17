@@ -5,10 +5,10 @@
 ?>
 
 <div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idaluguel')); ?>:</b>
+	<fieldset>
+	<legend>   <b><?php echo CHtml::encode($data->getAttributeLabel('idaluguel')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->idaluguel), array('view', 'id'=>$data->idaluguel)); ?>
-	<br />
+	<br />   </legend>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Nome do cliente')); ?>:</b>
 	<?php echo CHtml::encode($data->idusuario0->nome); ?>
@@ -26,6 +26,7 @@
 	<?php echo CHtml::encode($data->data_final); ?>
 	<br />
 
+</fieldset>
 
 </div>
 <br>

@@ -136,7 +136,7 @@
 
 	<div class="clear"></div>
 
-	<div id="footer" style="position:absolute; bottom:0; width:100%; text-align: center; padding: 10px; background-color: #e7e7e7;">
+	<div id="footer" style="position:fixed; bottom:0; width:100%; text-align: center; padding: 10px; background-color: #e7e7e7;">
 		 <div class="container">
         <?php echo Yii::powered(); ?>
       </div>

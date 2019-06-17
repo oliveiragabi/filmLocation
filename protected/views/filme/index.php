@@ -18,7 +18,7 @@ $this->breadcrumbs=array(
 </div>
 
 <br>
-<br>
+
 
 	<div class="col-md-4" style="margin-top: 2%;">
 		<div class="list-group" >

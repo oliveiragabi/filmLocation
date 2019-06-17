@@ -43,14 +43,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'idusuario',
 		array(
-			'header'=>'Cliente',
-			'value'=>'$data->idusuario0->nome',
-			
-		),
-		array(
-			'header'=>'Filme',
-			'value'=>'$data->idfilme0->nome',
-		),
+
+			'header' => 'Cliente',
+
+			'name' => 'idusuario0',
+
+            'filter' => CHtml::listData(User::model()->findAll(), 'idusuario', 'nome'), // fields from country table
+
+          'value'=>'User::Model()->FindByPk($data->idusuario)->nome',
+          
+        ),
+        array(
+
+			'header' => 'Filme',
+
+			'name' => 'idfilme0',
+
+            'filter' => CHtml::listData(Filme::model()->findAll(), 'idfilme', 'nome'), // fields from country table
+
+          'value'=>'Filme::Model()->FindByPk($data->idfilme)->nome',
+          
+        ),
 		
 		'idaluguel',
 		'data_inicial',

@@ -36,7 +36,7 @@ class Aluguel extends CActiveRecord
 			array('idusuario, idfilme', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idaluguel, idusuario, idfilme, data_inicial, data_final', 'safe', 'on'=>'search'),
+			array('idaluguel, idusuario0, idfilme0, data_inicial, data_final', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,10 +86,11 @@ class Aluguel extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idaluguel',$this->idaluguel);
-		$criteria->compare('idusuario',$this->idusuario);
-		$criteria->compare('idfilme',$this->idfilme);
+		$criteria->compare('idusuario',$this->idusuario0);
+		$criteria->compare('idfilme',$this->idfilme0);
 		$criteria->compare('data_inicial',$this->data_inicial,true);
 		$criteria->compare('data_final',$this->data_final,true);
+		
 		//$criteria->compare('idcategoria',$this->nome); 
 
 

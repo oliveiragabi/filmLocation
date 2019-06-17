@@ -2,6 +2,7 @@
 /* @var $this FilmeController */
 /* @var $model Filme */
 /* @var $form CActiveForm */
+ /* @var $data Categoria */
 ?>
 
 <div class="wide form">
@@ -22,8 +23,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idcategoria'); ?>
-		<?php echo $form->textField($model,'idcategoria'); ?>
+		<?php echo $form->label($model,'idcategoria0'); ?>
+		<?php echo $form->textField($model,'idcategoria0'); ?>
+
 	</div>
 
 	<div class="row buttons">

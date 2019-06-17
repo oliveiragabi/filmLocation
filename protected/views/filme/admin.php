@@ -1,6 +1,7 @@
 <?php
 /* @var $this FilmeController */
 /* @var $model Filme */
+/* @var $data Categoria */
 
 $this->breadcrumbs=array(
 	'Filmes'=>array('index'),
@@ -44,14 +45,25 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'idfilme',
 		'nome',
 		array(
-			'header'=>'Categoria',
-			'value'=>'$data->idcategoria0->nome',
-		),
+
+			'header' => 'Categoria',
+
+            'name' => 'idcategoria0',
+
+            'filter' => CHtml::listData(Categoria::model()->findAll(), 'idcategoria', 'nome'), // fields from country table
+
+          'value'=>'Categoria::Model()->FindByPk($data->idcategoria)->nome',
+          
+        ),
+	
 		array(
 			'class'=>'CButtonColumn',
 		),
 	
 	),
+
+
+
 )); ?>
 
 <br>
@@ -62,4 +74,5 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 			<a href="/sistemalocadora/index.php?r=filme/index" class="list-group-item">Criar</a>
 			<a href="/sistemalocadora/index.php?r=filme/create" class="list-group-item">Gerenciamento</a>
 		</div>
+
 </div>

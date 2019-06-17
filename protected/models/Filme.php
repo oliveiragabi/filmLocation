@@ -15,6 +15,7 @@
 class Filme extends CActiveRecord
 {
 	/**
+
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -47,7 +48,7 @@ class Filme extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tbAluguels' => array(self::HAS_MANY, 'Aluguel', 'idfilme'),
+			'tbAlugueis' => array(self::HAS_MANY, 'Aluguel', 'idfilme'),
 			'idcategoria0' => array(self::BELONGS_TO, 'Categoria', 'idcategoria'),
 		);
 	}
@@ -60,7 +61,7 @@ class Filme extends CActiveRecord
 		return array(
 			'idfilme' => 'Idfilme',
 			'nome' => 'Nome',
-			'idcategoria0' => 'Categoria',
+
 
 		);
 	}
@@ -81,15 +82,17 @@ class Filme extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
 		$criteria->compare('idfilme',$this->idfilme);
 		$criteria->compare('nome',$this->nome,true);
-		$criteria->compare('idcategoria',$this->idcategoria); 
+		$criteria->compare('idcategoria',$this->idcategoria0); 
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-		));
+			));
+			
 	}
 
 	/**
@@ -102,4 +105,5 @@ class Filme extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
 }
